@@ -1,7 +1,3 @@
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
-
 public class Main {
 
   public static void main(String [] args){
@@ -15,7 +11,6 @@ public class Main {
     System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
 
     flipNHeads(4);
-    clock();
   }
 
   public static String pluralize(String word, int num){
@@ -44,22 +39,5 @@ public class Main {
       count++;
     }
     System.out.println("It took " + count + " flips to flip " + n + " heads in a row.");
-  }
-
-  public static void clock(){
-
-    String test = " ";
-
-    while(true){
-      LocalDateTime now = LocalDateTime.now();
-
-      DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-      String formatDateTime = now.format(format);
-
-      if(!test.equals(formatDateTime)){
-        System.out.println(formatDateTime);
-      }
-      test = formatDateTime;
-    }
   }
 }
