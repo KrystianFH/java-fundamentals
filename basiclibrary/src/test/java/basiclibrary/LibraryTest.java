@@ -5,10 +5,45 @@ package basiclibrary;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assert.*;
 
 public class LibraryTest {
-    @Test public void testSomeLibraryMethod() {
+    @Test public void testRoll() {
         Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+//        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+        classUnderTest.roll(5);
+//        assertArrayEquals(numb);
     }
+
 }
+//Guidance from Bade
+//    Bade (TA)
+//1. Initialize the array
+//
+//        int[] numbers = new int[5];
+//
+//        ^^^ Always have to define the number of indices (spaces in the array) with Java ^^^
+//
+//        ____________________
+//        2. Iterate through the array
+//
+//        for (int i = 0; i < numbers.length; i++) {
+//        // all of our code here
+//        }
+//
+//        _____________________
+//        3. Fill each index of the array
+//
+//        You have an array of integers
+//        index		elements
+//        [0] 	= 	1
+//        [1] 	= 	4
+//        [2] 	= 	7
+//        [3] 	= 	10
+//
+//        for (int i = 0; i < numbers.length; i++) {
+//        //whatever calculation
+//        you want
+//        numbers[i] = //whatever number needs to be assigned
+//
+//        }
