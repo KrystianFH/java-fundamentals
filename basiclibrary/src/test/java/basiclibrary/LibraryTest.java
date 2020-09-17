@@ -8,12 +8,43 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.*;
 
 public class LibraryTest {
-    @Test public void testRoll() {
-        Library classUnderTest = new Library();
-//        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
-        classUnderTest.roll(5);
-//        assertArrayEquals(numb);
+//    @Test public void testRoll() {
+//        Library classUnderTest = new Library();
+////        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+//        classUnderTest.roll(5);
+////        assertArrayEquals(numb);
+//    }
+
+    @Test
+    public void testRoll() {
+        Library rolling = new Library();
+        int[] output = rolling.roll(10000);
+        int ones = 0;
+        for(int i = 0; i < output.length; i++){
+            if(output [i] == 1){
+                ones++;
+            }
+        }
+        assertTrue("there should be at least one 1", ones > 0);
+        assertEquals("The length should be 10000", 10000, output.length);
     }
+
+    @Test public void testContainsDuplicates() {
+        Library contDupe = new Library();
+        assertTrue("this one does", contDupe.containsDuplicates(new int[]{1, 2, 1}));
+    }
+
+    @Test public void testAverageOfArrays() {
+        Library averages = new Library();
+//        assertArrayEquals(new int[]{1,2,3}, averages.lowestOfAverages(new int[][]{{1, 2, 3}, {10, 20, 30}}));
+
+    }
+
+
+
+
+
+
 
 }
 //Guidance from Bade

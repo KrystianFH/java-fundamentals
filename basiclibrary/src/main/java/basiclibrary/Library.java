@@ -10,26 +10,54 @@ public class Library {
         return true;
     }
 
-//    public static void main(String [] args)
-//    {
-//        roll(5);
-//        roll(3);
-//        roll(0);
+//    public int[] roll(int n){
+//        int[] numbers = new int[5];
+//        int min = 1;
+//        int max = 6;
+//
+//        for(int i = 0; i < numbers.length; i++){
+//            int rollValue = (int)(Math.random() * 6 + 1);
+//            numbers[i] = rollValue;
+//        }
+//        return numbers;
 //    }
 
-    public int[] roll(int n){
-        int[] numbers = new int[5];
-        int min = 1;
-        int max = 6;
-
-        for(int i = 0; i < numbers.length; i++){
-            int rollValue = (int)(Math.random() * 6 + 1);
-            numbers[i] = rollValue;
-        }
-        return numbers;
+    public int[] roll (int time){
+        int[] result = new int[10000];
+        result[0] = 1;
+        return result;
     }
 
-//    public boolean containsDuplicates(){
-//        int[] array =
+    public boolean containsDuplicates(int[] thingToCheck){
+        for(int slow = 0; slow < thingToCheck.length; slow++){
+            for(int fast = slow +1 ; fast < thingToCheck.length; fast++){
+
+            }
+        }
+
+        return false;
+    }
+
+//    public double average(int[] numbs){
+//        int total = 0;
+//        for(int i = 0; i < numbs.length; i++){
+//            total += numbs[i];
+//        }
+//        return (double) total / numbs.length;
 //    }
+//    public int[] lowestOfAverages(int[][] tempsPerWeek){
+////        double lowest = Double.MAX_VALUE;
+//        double lowest = average(tempsPerWeek[0]);
+//
+//        for(int i = 0; i < tempsPerWeek.length; i++){
+//            if (lowest > average((tempsPerWeek[i]))) {
+//
+//
+//            }
+//        }
+//        return new int[0];
+//    }
+
+//    public String analyzeWeatherData (int[])
+
 }
