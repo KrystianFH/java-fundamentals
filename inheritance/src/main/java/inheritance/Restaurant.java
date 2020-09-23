@@ -7,9 +7,9 @@ public class Restaurant {
     }
 
 
-    private String name;
-    private String price;
-    private double stars;
+    protected String name;
+    protected String price;
+    protected double stars;
 
 
     public Restaurant(String name, String price, double stars) {
@@ -30,6 +30,15 @@ public class Restaurant {
     public String getName(){
         return this.name;
     }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public double getStars() {
+        return stars;
+    }
+
 }
 
 
