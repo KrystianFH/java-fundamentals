@@ -6,7 +6,9 @@ public class Review extends Restaurant{
     private String author;
     private double stars;
 
-    public Review(String body, String author, double stars) {
+
+
+    public Review(String name, String price, double stars) {
         super(name, price, stars);
     }
 
