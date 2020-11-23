@@ -1,3 +1,6 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Main {
 
   public static void main(String [] args){
@@ -11,10 +14,11 @@ public class Main {
     System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
 
     flipNHeads(4);
+    clock();
   }
 
   public static String pluralize(String word, int num){
-    if (num >1){
+    if (num != 1){
       return word + "s";
     }
     return word;
@@ -39,5 +43,27 @@ public class Main {
       count++;
     }
     System.out.println("It took " + count + " flips to flip " + n + " heads in a row.");
+  }
+
+  public static void clock(){
+    LocalDateTime now;
+    DateTimeFormatter format = DateTimeFormatter.ofPattern("HH:mm:ss");
+
+    double counter = 0.0;
+
+    int currentSecond;
+    int previousSecond = LocalDateTime.now().getSecond();
+
+    while (true){
+      counter++;
+      now = LocalDateTime.now();
+      currentSecond = now.getSecond();
+      if(currentSecond == previousSecond){
+        continue;
+      } else{
+        System.out.println(now.format(format));
+        previousSecond = currentSecond;
+      }
+    }
   }
 }
