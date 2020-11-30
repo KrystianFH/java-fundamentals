@@ -32,23 +32,23 @@ public class LibraryTwoTest {
 
     }
 
-    @Test public void testTally() {
-        LibraryTwo test2 = new LibraryTwo();
-
-        List<String> votes = new ArrayList<>();
-        votes.add("Bush");
-        votes.add("Bush");
-        votes.add("Bush");
-        votes.add("Shrub");
-        votes.add("Hedge");
-        votes.add("Shrub");
-        votes.add("Bush");
-        votes.add("Hedge");
-        votes.add("Bush");
-
-        assertEquals(test2.);
-
-
-
-    }
+//    @Test public void testTally() {
+//        LibraryTwo test2 = new LibraryTwo();
+//
+//        List<String> votes = new ArrayList<>();
+//        votes.add("Bush");
+//        votes.add("Bush");
+//        votes.add("Bush");
+//        votes.add("Shrub");
+//        votes.add("Hedge");
+//        votes.add("Shrub");
+//        votes.add("Bush");
+//        votes.add("Hedge");
+//        votes.add("Bush");
+//
+//        assertEquals(test2.);
+//
+//
+//
+//    }
 }
