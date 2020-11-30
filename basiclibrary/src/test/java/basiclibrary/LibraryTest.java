@@ -18,34 +18,37 @@ public class LibraryTest {
     @Test
     public void testRoll() {
         Library rolling = new Library();
-        int[] output = rolling.roll(10000);
-        int ones = 0;
-        for(int i = 0; i < output.length; i++){
-            if(output [i] == 1){
-                ones++;
-            }
+
+        for(int i = 0; i < 10; i++){
+            assertTrue("Array of rolls is the correct length", i == rolling.roll(i).length);
         }
-        assertTrue("there should be at least one 1", ones > 0);
-        assertEquals("The length should be 10000", 10000, output.length);
     }
 
     @Test public void testContainsDuplicates() {
-        Library contDupe = new Library();
-        assertTrue("this one does", contDupe.containsDuplicates(new int[]{1, 2, 1}));
+        Library containsDupes = new Library();
+        assertTrue("Test of array that contains duplicates", containsDupes.containsDuplicates(new int[]{1, 2, 1}));
+        assertFalse("Test of array with no duplicates", containsDupes.containsDuplicates(new int[]{1, 2, 8}));
     }
 
-    @Test public void testAverageOfArrays() {
-        Library averages = new Library();
-//        assertArrayEquals(new int[]{1,2,3}, averages.lowestOfAverages(new int[][]{{1, 2, 3}, {10, 20, 30}}));
-
+    @Test public void testFindAverage() {
+        Library calculateAvg = new Library();
+        assertEquals(3.0, calculateAvg.findAverage(new int[]{2,3,4}), 0);
+        assertEquals(2.5, calculateAvg.findAverage(new int[]{1,2,3,4}), 0);
     }
 
-
-
-
-
-
-
+    @Test public void testGetLowestOfAvgArr(){
+        Library findLowestArr = new Library();
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+        for(int[] integerArray : weeklyMonthTemperatures){
+            System.out.println(findLowestArr.findAverage(integerArray));
+        }
+        assertArrayEquals(weeklyMonthTemperatures[2], findLowestArr.getLowestOfAveragesArray(weeklyMonthTemperatures));
+    }
 }
 //Guidance from Bade
 //    Bade (TA)
