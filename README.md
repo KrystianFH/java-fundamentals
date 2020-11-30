@@ -34,6 +34,16 @@
 
 ## Lab 3 - Maps and File I/O
 
+##### *Special thank you to Jack Nelson for helping guide me through my challenges with this lab. Check out some of the cool things he is up to [here!](https://github.com/jnelsonjava)*
+
 1. Feature Task : Analyzing Weather Data
-1. Feature Task : Tallying Election
-1. Feature Task : JavaScript Linter
+
+  - Using given weather data, iterate through all of the data to find the minimum and maximum values. Use a 'HashSet' of type 'Integer' to keep track of all of the unique temperatures seen. Lastly, iterate from the minimum temperature to the maximum temperature and create a String containing any temperature not seen during the month. Return that String. 
+
+2. Feature Task : Tallying Election
+
+  - Write a function called 'tally' that accepts a list of Strings representing votes and returns one string to show what got the most votes.
+
+3. Feature Task : JavaScript Linter
+
+  - Write a method that reads a JavaScript file with a given 'Path' and generates an error message whenever it finds a line that doesn't end in a semi-colon. Call the method in the 'main' method on the file 'gates.js' and pring out the resulting error message.
