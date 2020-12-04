@@ -9,7 +9,7 @@ public class Library {
     }
 
     public static void main(String[] args){
-        Restaurant restaurant = new Restaurant("Pizza Planet", "$", 4.8);
+        Restaurant restaurant = new Restaurant("Pizza Planet", "$", 4);
         System.out.println(restaurant);
     }
 }
