@@ -7,11 +7,6 @@ public class Library {
     public boolean someLibraryMethod() {
         return true;
     }
-
-    public static void main(String[] args){
-        Restaurant restaurant = new Restaurant("Pizza Planet", "$", 4);
-        System.out.println(restaurant);
-    }
 }
 
 
