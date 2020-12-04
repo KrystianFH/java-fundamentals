@@ -2,55 +2,44 @@ package inheritance;
 
 import java.util.LinkedList;
 
-public class Restaurant {
+public class Restaurant extends Location{
 
     public boolean someLibraryMethod() {
         return true;
     }
 
+    private int price;
 
-    protected String name;
-    protected String price;
-    protected int stars;
-    LinkedList<Review> reviewList = new LinkedList<>();
-
-
-    public Restaurant(String name, String price, int stars) {
-        this.name = name;
+    public Restaurant(String name, int price) {
+        super(name);
         this.price = price;
-        this.stars = stars;
     }
 
     @Override
     public String toString() {
         return "Restaurant{" +
-                "name='" + name + '\'' +
-                ", price='" + price + '\'' +
-                ", stars=" + stars +
-                ", reviewList=" + reviewList +
+                "name='" + this.getName() + '\'' +
+                ", price='" + this.getPrice() + '\'' +
+                ", stars=" + this.getStars() +
+                ", reviewList=" + this.getReviewList() +
                 '}';
     }
 
-    //    public String getName(){
-//        return this.name;
-//    }
-//
-//    public String getPrice() {
-//        return price;
-//    }
-//
-//    public double getStars() {
-//        return stars;
-//    }
 
-    public void addReview(Review review){
-        reviewList.addFirst(review);
-        updateStars();
+
+    public String getPrice() {
+        String outputDSigns = "";
+        for (int i=0; i < price; i++){
+            outputDSigns += '$';
+        }
+        return outputDSigns;
     }
 
-    private void updateStars(){
-        int total = reviewList.stream().mapToInt(review -> review.stars).sum();
-        stars = (total / reviewList.size());
+
+    public void addReview(TheaterReview review) throws Exception{
+
+        System.out.println(String.format("Theater Reviews not accepted by %ss.", this.getClass().getSimpleName()));
+        throw new Exception("Movie reviews not accepted");
     }
 }
 

@@ -1,22 +1,25 @@
 package inheritance;
 
-public class Shop {
-    private String name;
-    private String description;
-    private String price;
+public class Shop extends Restaurant{
 
-    public Shop(String name, String description, String price) {
-        this.name = name;
+    private String description;
+
+    public Shop(String name, String description, int price) {
+        super(name, price);
         this.description = description;
-        this.price = price;
+
     }
 
     @Override
     public String toString() {
         return "Shop{" +
-                "name='" + name + '\'' +
+                "name='" + this.getName() + '\'' +
                 ", description='" + description + '\'' +
-                ", price='" + price + '\'' +
+                ", price='" + this.getPrice() + '\'' +
                 '}';
+    }
+
+    public String getDescription(){
+        return description;
     }
 }
