@@ -118,3 +118,32 @@
   - Ensure that including a movie is optional for users
   - Add tests
 
+## Lab 11 - Spring for Full-Stack Web Apps
+
+1. Feature Task : Successfully Run Spring App
+  
+  - Ensure that you can run the Spring app
+
+2. Feature Task : Hello World Route
+
+  - Create a Hello World route at `/hello`
+  - Ensure that you can visit that route in your browser and see a rendered template come back
+
+3. Feature Task : UpperCase
+
+  - Create a route that turns words into UPPER CASE
+
+4. Feature Task : Splash Page
+
+  - Create a basic splash page for the Songr app, available at the root route, and style it appropriately with CSS
+
+5. Feature Task : Album Class
+
+  - Create an `Album` class to act as a model in the app.
+      - Albums should have a title, artist, songCount, length, and imageUrl
+
+6. Feature Task : Album Route
+
+  - create a route at `/albums` that shows three album instances
+
+
